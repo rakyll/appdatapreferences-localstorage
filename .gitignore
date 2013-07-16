@@ -3,6 +3,5 @@ dist
 temp
 .sass-cache
 lib/components
-closure-library
 npm-debug.log
 lib/deps.js
