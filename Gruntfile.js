@@ -56,11 +56,8 @@ module.exports = function (grunt) {
   // the file globbing pattern for vendor file uglification.
   CONF.vendorFiles = [
       // all files JS in vendor folder
-      CONF.appPath + '/vendor/*.js',
-
-      // and do not include jQuery, we'll use a CDN for it.
-      '!' + CONF.appPath + '/vendor/jQuery*'
-    ];
+      CONF.appPath + '/vendor/*.js'
+  ];
 
 
 
@@ -172,7 +169,7 @@ module.exports = function (grunt) {
         closureLibraryPath: CONF.closureLibrary,
         inputs: [CONF.appPath + CONF.bootstrapFile],
         compile: true,
-        compilerFile: compiler.getPathSS(),
+        compilerFile: compiler.getPath(),
         compilerOpts: {
           compilation_level: 'ADVANCED_OPTIMIZATIONS',
           externs: [CONF.externsPath + '*.js'],
@@ -187,7 +184,6 @@ module.exports = function (grunt) {
           create_source_map: CONF.sourceMap,
           source_map_format: 'V3',
           output_wrapper: CONF.outputWrapper
-
         }
       },
       app: {
@@ -327,6 +323,13 @@ module.exports = function (grunt) {
     'clean:dist',
     'uglify:vendor',
     'closureBuilder:app',
+    'concat:production'
+  ]);
+
+  grunt.registerTask('debug', [
+    'clean:dist',
+    'uglify:vendor',
+    'closureBuilder:debug',
     'concat:production'
   ]);
 
