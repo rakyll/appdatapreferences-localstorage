@@ -7,3 +7,5 @@ JSON.stingify = function() {};
 var console = {};
 
 console.log = function() {};
+
+var localStorage = {};
