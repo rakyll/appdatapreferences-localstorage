@@ -1,4 +1,4 @@
-You need to have `npm` installed on your machine.
+You need to have `npm` and `grunt-cli` installed on your machine.
 
 ~~~
 git submodule init && git submodule update
