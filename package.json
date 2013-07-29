@@ -1,5 +1,5 @@
 {
-  "name": "appdatapreferences",
+  "name": "appdatapreferences-localstorage",
   "version": "0.0.1",
   "description": "",
   "author": {
@@ -38,11 +38,5 @@
     "application data",
     "google drive",
     "preferences"
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://en.wikipedia.org/wiki/MIT_License"
-    }
   ]
 }
