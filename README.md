@@ -1,8 +1,12 @@
-You need to have `npm`, `bower` and `grunt` installed on your machine.
+You need to have `npm` installed on your machine.
+
+~~~
+git submodule init && git submodule update
+~~~
 
 Install dependencies:
 ~~~
-npm install && bower install
+npm install
 ~~~
 
 Release a new distribution:
