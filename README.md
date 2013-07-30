@@ -1,10 +1,12 @@
 # Appdata Preferences for Local Storage
 
-Appdata Preferences for Local Storage seamessly syncs your local storage with Google Drive, you don't need to worry about persisting your user settings anymore.
+Appdata Preferences for Local Storage seamessly syncs your local storage with Google Drive, you don't need to worry about persisting your user settings and application data anymore.
 
 ## quickstart
 
 Include appdatapreferences and configure it with an access token. Your access token need to be authorized for `https://www.googleapis.com/auth/drive.appdata` scope. You can go through [one of the OAuth 2.0 flows](https://developers.google.com/accounts/docs/OAuth2) to retrieve one or use [Google+ Sign-In](https://developers.google.com/+/web/signin/) button.
+
+Grab the `dist/appdatapreferences.js` and include it.
 
     <script src="/path/to/appdatapreferences.js"></script>
     <script>
@@ -12,9 +14,12 @@ Include appdatapreferences and configure it with an access token. Your access to
 	    appdatapreferences.start();
 	</script>
 
-Your storage will be initiated with the remote preferences on user's Drive. If this is the first time, your user is being synchronized with Google Drive, the library will initiate a new remote preferences file with his/her current local storage. Continue to edit your `localStorage` and wait for your preferences to be synced.
+Your storage will be initiated with the remote preferences on user's Drive. If this is the first time, your user is being synchronized with Google Drive, the library will initiate a new remote preferences file with his/her current local storage.
 
     localStore['name'] = 'my name';
+
+Continue to edit your `localStorage` and wait for your preferences to be synced. That's it.
+
 
 ## reference
 
